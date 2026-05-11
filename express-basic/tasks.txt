@@ -1,0 +1,11 @@
+basic server
+multiple routes 
+sending json data 
+params capture req.params
+query params capture req.query
+post method 
+all methods
+middleware
+404
+morgan
+studenr server CRUD

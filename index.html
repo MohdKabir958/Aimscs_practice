@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <p class="display"></p>
+
+  <button id="btn">Counter</button>
+
+  <p class="display"></p>
+  <script>
+    // 1. Create a variable to hold the data (The data)
+    let count = 0;
+
+    // 2. Grab the elements from the UI (The "hooks" to the screen)
+    const display = document.getElementsByClassName('display');
+    const button = document.getElementById('btn');
+
+    // 3. Define what happens when we click
+    button.addEventListener('click', () => {
+      // A. Update the data
+      count = count + 1;
+
+      // B. MANUALLY tell the browser to update the text
+      // Without this line, the UI stays at 0 even if count is 100!
+      // display.innerText = `You clicked ${count} times`;
+      for (let i = 0; i < display.length; i++) {
+    display[i].innerText = `You clicked ${count} times`;
+  }
+    });
+  </script>
+</body>
+
+</html>
